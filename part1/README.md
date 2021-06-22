@@ -50,8 +50,13 @@ Alpine output
 ![1.6](1.6.png)
 
 ## 1.7
+[Dockerfile](1.7/Dockerfile)
 
-![]()
+![1.7.1](1.7.1.png)
+
+Commands
+- `docker build . -t web-server`
+- `docker run web-server`
 
 ## 1.8
 
