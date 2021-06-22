@@ -59,8 +59,13 @@ Commands
 - `docker run web-server`
 
 ## 1.8
+[Dockerfile](1.8/Dockerfile)
 
-![]()
+![1.8.1](1.8.1.png)
+
+Commands
+- `docker build . -t curler`
+- `docker run -it curler`
 
 ## 1.9
 
