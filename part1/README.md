@@ -87,7 +87,11 @@ Commands
 
 ## 1.13
 
-![]()
+[Dockerfile](1.13/Dockerfile)
+
+Build image with command `docker build . -t example-backend` in the same directory as [Dockerfile](1.13/Dockerfile).
+
+Run container with command `docker run -p 8080:8080 example-backend`
 
 ## 1.14
 
