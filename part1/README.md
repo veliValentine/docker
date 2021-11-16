@@ -95,7 +95,19 @@ Run container with command `docker run -p 8080:8080 example-backend`
 
 ## 1.14
 
-![]()
+### Frontend
+[Dockerfile](1.14/front/Dockerfile)
+
+Build image with command `docker build . -t front-1-14` in the same directory as [Dockerfile](1.14/front/Dockerfile).
+
+Run container with command `docker run -p 5000:5000 front-1-14`
+
+### Backend
+[Dockerfile](1.14/server/Dockerfile)
+
+Build image with command `docker build . -t server-1-14` in the same directory as [Dockerfile](1.14/server/Dockerfile).
+
+Run container with command `docker run -p 8000:8000 server-1-14`
 
 ## 1.15
 
