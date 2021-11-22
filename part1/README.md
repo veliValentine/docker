@@ -1,4 +1,4 @@
-# Exercises 1.1-1.2
+# Exercises 1.1-1.16
   - [1.1](#11)
   - [1.2](#12)
   - [1.3](#13)
@@ -13,7 +13,6 @@
   - [1.12](#112)
   - [1.13](#113)
   - [1.14](#114)
-  - [1.15](#115)
   - [1.16](#116)
 ## 1.1
 
@@ -109,11 +108,9 @@ Build image with command `docker build . -t server-1-14` in the same directory a
 
 Run container with command `docker run -p 8000:8000 server-1-14`
 
-## 1.15
-
-![]()
 
 ## 1.16
 
-![]()
+Application is running @Heroku
+[https://docker-dev-ops-1-16.herokuapp.com/presses](https://docker-dev-ops-1-16.herokuapp.com/presses)
 
