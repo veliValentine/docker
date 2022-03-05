@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  redis-server:
+    image: redis
+    restart: unless-stopped
+
+  backend:
+    build: ../../part1/1.14/server
+    ports:
+      - 8000:8000
+    environment:
+      - REDIS_HOST=redis-server
+
+  client:
+    build: ../../part1/1.14/front
+    ports:
+      - 5000:5000

@@ -15,3 +15,8 @@ Run: `docker compose up`
 [in ./2.3](./2.3/)
 
 Run: `docker compose up`
+
+## 2.4
+[in ./2.4](./2.4/)
+
+Run: `docker compose up`
