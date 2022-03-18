@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  redis-server:
+    image: redis
+    restart: unless-stopped
+
+  db:
+      image: postgres:13.2-alpine
+      restart: unless-stopped
+      environment:
+        POSTGRES_PASSWORD: postgres
+
+  backend:
+    build: ../../part1/1.14/server
+    ports:
+      - 8000:8000
+    environment:
+      - REDIS_HOST=redis-server
+      - POSTGRES_HOST=db
+
+  client:
+    build: ../../part1/1.14/front
+    ports:
+      - 5000:5000

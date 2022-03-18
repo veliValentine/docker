@@ -31,3 +31,8 @@ Run:
 4. Open [http://localhost:3000/](http://localhost:3000/) and click button
 
 Line 3 starts docker compose and scales container `compute` 
+
+## 2.6
+[in ./2.6](./2.6/)
+
+Run: `docker compose up`
