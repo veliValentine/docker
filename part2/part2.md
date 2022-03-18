@@ -36,3 +36,8 @@ Line 3 starts docker compose and scales container `compute`
 [in ./2.6](./2.6/)
 
 Run: `docker compose up`
+
+## 2.7
+[in ./2.7](./2.7/)
+
+Run: `docker compose up`
