@@ -46,3 +46,10 @@ Run: `docker compose up`
 [in ./2.8](./2.8/)
 
 Run: `docker compose up`
+
+## 2.9
+[in ./2.9](./2.9/)
+
+Run: `docker compose up`
+
+Db is saved at `~db`
