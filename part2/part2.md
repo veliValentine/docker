@@ -53,3 +53,18 @@ Run: `docker compose up`
 Run: `docker compose up`
 
 Db is saved at `~db`
+
+## 2.10
+[in ./2.10](./2.10/)
+
+Run: `docker compose up`
+
+[compose](./2.10/docker-compose.yml)
+
+[server dockerfile](./2.10/server/Dockerfile)
+
+[client dockerfile](./2.10/front/Dockerfile)
+
+### Changes
+- removed ports in compose file
+- added `REACT_APP_BACKEND_URL=http://localhost/api` env variable to client compose
