@@ -7,4 +7,6 @@ In progress...
 
 [Part1](./part1/README.md)
 
-[Part2](./part2/part2.md)
+[Part2](./part2/README.md)
+
+[Part3](./part3/README.md)
