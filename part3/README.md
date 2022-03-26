@@ -15,7 +15,7 @@ Build image: `docker build . -t test`
 
 Run container: `docker run -e PASSWORD=DOCKER_HUB_PASSWORD -v /var/run/docker.sock:/var/run/docker.sock test`
 
-# 3.3
+## 3.3
 
 Non root users runs applications
 
@@ -24,3 +24,11 @@ Non root users runs applications
 [front dockerfile](./3.3/front/Dockerfile)
 
 Front uses alpine linux system so used `adduser`.
+
+## 3.4
+Optimized image sizes. Combine `RUN` commands and remove useless aprts.
+ 
+|             | Original | Optimized |
+| ----------- | -------- | --------- |
+| Front size  | 416MB    | 233MB     |
+| Server size | 1.07GB   | 447MB     |
