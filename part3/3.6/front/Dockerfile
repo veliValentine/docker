@@ -1,18 +1,14 @@
-FROM node:16.13.0-alpine
-
-EXPOSE 5000
+FROM node:16.13.0-alpine as build
 
 WORKDIR /usr/src/app
 
 COPY ./example-frontend/. .
 
 RUN npm install --production && \
-	REACT_APP_BACKEND_URL=http://localhost:8000 npm run build && \
-	npm install -g serve && \
-	adduser client -D && \
-	rm src -r && \
-	rm node_modules -r
+	REACT_APP_BACKEND_URL=http://localhost:8000 npm run build
 
-USER client
+FROM nginx:1.19-alpine
 
-CMD ["serve", "-s","-l", "5000","build"]
+COPY --from=build /usr/src/app/build/ /usr/share/nginx/html
+
+EXPOSE 80
