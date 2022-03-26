@@ -27,8 +27,14 @@ Front uses alpine linux system so used `adduser`.
 
 ## 3.4
 Optimized image sizes. Combine `RUN` commands and remove useless aprts.
- 
+
 |             | Original | Optimized |
 | ----------- | -------- | --------- |
 | Front size  | 416MB    | 233MB     |
 | Server size | 1.07GB   | 447MB     |
+
+## 3.5
+|             | Original | Bigger base image       | Optimized (alpine) |
+| ----------- | -------- | ----------------------- | ------------------ |
+| Front size  | 233MB    | 1.03GB (`FROM node:16`) | 233MB              |
+| Server size | 447MB    | 1.12GB (`FROM golang`)  | 447MB              |
