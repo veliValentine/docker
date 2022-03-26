@@ -38,3 +38,13 @@ Optimized image sizes. Combine `RUN` commands and remove useless aprts.
 | ----------- | -------- | ----------------------- | ------------------ |
 | Front size  | 233MB    | 1.03GB (`FROM node:16`) | 233MB              |
 | Server size | 447MB    | 1.12GB (`FROM golang`)  | 447MB              |
+
+## 3.6
+
+### Front
+
+Build: `docker build front/ -t front`
+
+Run: `docker run -p 80:80 front`
+
+Open: [http://localhost](http://localhost)
