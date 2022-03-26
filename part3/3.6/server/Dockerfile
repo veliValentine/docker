@@ -1,18 +1,19 @@
-FROM golang:1.16-alpine
-
-EXPOSE 8000
+FROM golang:1.16-alpine as build
 
 WORKDIR /usr/src/app
 
 COPY ./example-backend/. .
 
-RUN go build && \
-	adduser server -D
+RUN CGO_ENABLED=0 go build -o /src/go/server
 
-ENV REQUEST_ORIGIN="http://localhost:5000"
+FROM scratch
+
+COPY --from=build /src/go/server /server
+
+EXPOSE 8000
 
 ENV PORT=8000
 
-USER server
+ENV REQUEST_ORIGIN="http://localhost:5000"
 
-CMD ["./server"]
+ENTRYPOINT ["/server"]

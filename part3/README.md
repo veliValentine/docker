@@ -41,10 +41,20 @@ Optimized image sizes. Combine `RUN` commands and remove useless aprts.
 
 ## 3.6
 
-### Front
+### 3.6.A Front
 
 Build: `docker build front/ -t front`
 
 Run: `docker run -p 80:80 front`
 
 Open: [http://localhost](http://localhost)
+
+### 3.6.B Server
+
+Build: `docker build server/ -t server`
+
+Run: `docker run -p 8000:8000 server`
+
+Open: [http://localhost:8000](http://localhost:8000)
+
+**SIZE 18MB**
