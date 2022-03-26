@@ -14,3 +14,13 @@ Image clones [repository](https://github.com/veliValentine/solidabis-koodihaaste
 Build image: `docker build . -t test`
 
 Run container: `docker run -e PASSWORD=DOCKER_HUB_PASSWORD -v /var/run/docker.sock:/var/run/docker.sock test`
+
+# 3.3
+
+Non root users runs applications
+
+[Server dockerfile](./3.3/server/Dockerfile)
+
+[front dockerfile](./3.3/front/Dockerfile)
+
+Front uses alpine linux system so used `adduser`.
