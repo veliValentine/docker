@@ -1,4 +1,4 @@
-# Exercises 3.1-
+# Exercises 3.1-3.7
 
 ## 3.1 A deployment pipeline to Heroku
 
@@ -58,3 +58,21 @@ Run: `docker run -p 8000:8000 server`
 Open: [http://localhost:8000](http://localhost:8000)
 
 **SIZE 18MB**
+
+## 3.7
+Changes:
+- Reduced base images
+- static content copied leaving build dependencies behind
+- Run build commands as non root user
+
+[Dockerfile before](https://github.com/veliValentine/solidabis-koodihaaste-2021/blob/master/Dockerfile)
+
+[Dockerfile after optimization](https://github.com/veliValentine/solidabis-koodihaaste-2021/blob/master/Dockerfile-optimize)
+
+|      | Before | After  |
+| ---- | ------ | ------ |
+| size | 923MB  | 94.6MB |
+
+Build image: `docker build . -t pre -f Dockerfile-optimize`
+
+Run container: `docker run -p 3000:3000 pre`
